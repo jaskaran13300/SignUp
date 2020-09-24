@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="google-signin-client_id" content="370408449373-dh7m9i78rqk1h1bnt3sba3l2g5u5979i.apps.googleusercontent.com">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -16,8 +17,9 @@
 </head>
 
 <body>
+  
     <script>
-
+      
       function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
               console.log('statusChangeCallback');
               // response include The current login status of the person.
@@ -59,26 +61,6 @@
                       'Thanks for logging in, ' + response.name + '! <br>';
               });
           }
-
-
-          function onSuccess(googleUser) {
-              console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-          }
-          function onFailure(error) {
-              console.log(error);
-          }
-          function renderButton() {
-              gapi.signin2.render('google-sign-in-id', {
-                  'scope': 'profile email',
-                  'width': 240,
-                  'height': 50,
-                  'longtitle': true,
-                  'theme': 'dark',
-                  'onsuccess': onSuccess,
-                  'onfailure': onFailure
-              });
-          }
-
     </script>
 
     <div class="img-container">
@@ -89,11 +71,14 @@
         <h2>Create your account</h2>
         <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
         <div class="social-media">
-            <div id="google-sign-in-id"></div>
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                Sign Up With Facebook
-            </fb:login-button>
 
+                <div class="g-signin2" data-width="222" data-height="40" data-longtitle="true" style="margin-left: 30.5%;">
+                </div>
+                  <div style="margin:4%"></div>
+                <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default"
+                  data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email" onlogin="checkLoginState();" style="margin-left: 30%;">
+                  Signup with facebook
+                </div>
 
         </div>
         <div class="division">
@@ -107,11 +92,11 @@
                 <input id="LastName" class="form-control" type="text" placeholder="Last Name" name="Last Name">
                 <input id="email" class="form-control" type="text" placeholder="Email Address" name="Email Address">
                 <input id="password" class="form-control" type="password" placeholder="Password" name="Password">
-                <h9>By clicking Sign Up,you agree to our<a href="#"> Terms of Use</a> and our<a href="#"> Privacy
-                        Policy</a></h9>
+                <h6 class="Privacy">By clicking Sign Up,you agree to our<a href="#"> Terms of Use</a> and our<a href="#"> Privacy
+                        Policy</a></h6>
                 <input class="btn btn-default btn-login" type="button" value="SIGN UP">
             </form>
-            <div id="status">
+            <div style="text-align: center; margin-top: 1%;" id="status">
             </div>
         </div>
 
@@ -122,8 +107,3 @@
 </body>
 
 </html>
-
-
-
-
-
